@@ -38,7 +38,17 @@ module MethodsQuiz
 		end
 	end
 	
-	# TODO - write closer_to
+	def closer_to(target,guess1,guess2)
+		diff1 = (target - guess1).abs
+		diff2 = (target - guess2).abs
+		if(diff1 > diff2)
+			guess2
+		elsif(diff2 > diff1)
+			guess1
+		else
+			0
+		end
+	end
 
 	# TODO - write two_as_one?
 
