@@ -1,6 +1,15 @@
 module MethodsQuiz
 	
-	# TODO - write has_teen?
+	def has_teen?(ints)
+		first = ints.shift
+		second = ints.shift
+		third = ints.shift
+		if((first < 20 && first > 12)||(second < 20 && second > 12)||(third < 20 && third > 12))
+			true
+		else
+			false
+		end
+	end
 	
 	# TODO - write not_string
 	
