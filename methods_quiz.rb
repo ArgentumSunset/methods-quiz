@@ -11,7 +11,14 @@ module MethodsQuiz
 		end
 	end
 	
-	# TODO - write not_string
+	def not_string(str)
+		first = str[0..2]
+		if(first == "not")
+			str
+		else
+			"not " + str
+		end
+	end
 	
 	# TODO - write icy_hot?
 	

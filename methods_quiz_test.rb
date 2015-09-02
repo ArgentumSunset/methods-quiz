@@ -20,6 +20,7 @@ class MethodsQuizTest < MiniTest::Test
 
 	def test_not_string
 		assert_equal "not feasible", @m.not_string("feasible")
+		assert_equal "not knowing you has been blissful", @m.not_string("knowing you has been blissful")
 		assert_equal "not a trap, Admiral", @m.not_string("not a trap, Admiral")
 	end
 
