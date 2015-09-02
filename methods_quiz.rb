@@ -61,6 +61,21 @@ module MethodsQuiz
 		end
 	end
 
-	# TODO - write pig_latinify
+def pig_latinify(str)
+	str = str.strip
+	str = str.downcase
+	if(str == 'fuck' || str == 'shit' || str == 'crap' || str == 'damn' || str == "ass" || str == "asshole")
+		str = str.gsub(/[aeiou]/, "*")
+		str
+	elsif(str[0] == 'a' || str[0] == 'i' || str[0] == 'e' || str[0] == 'u' || str[0] == 'o')
+		str = str + 'way'
+		str
+	else
+		first = str[0]
+		str[0] = ''
+		str = str + first + 'ay'
+		str
+	end
+end
 
 end

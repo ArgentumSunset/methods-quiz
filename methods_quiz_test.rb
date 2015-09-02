@@ -39,6 +39,7 @@ class MethodsQuizTest < MiniTest::Test
 		assert_equal 54, @m.closer_to(50,54,78)
 		assert_equal 15, @m.closer_to(18,25,15)
 		assert_equal -12, @m.closer_to(0,-12,13)
+		assert_equal 13, @m.closer_to(12,13,74)
 		assert_equal 0, @m.closer_to(25,30,20)
 	end
 
@@ -58,4 +59,5 @@ class MethodsQuizTest < MiniTest::Test
 		assert_equal "avajay", @m.pig_latinify('Java  ')
 		assert_equal "sh*t", @m.pig_latinify('shit')
 		assert_equal "d*mn", @m.pig_latinify(' DaMN   ')
+	end
 end
