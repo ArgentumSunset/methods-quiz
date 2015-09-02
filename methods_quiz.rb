@@ -50,7 +50,16 @@ module MethodsQuiz
 		end
 	end
 
-	# TODO - write two_as_one?
+	def two_as_one?(int1,int2,int3)
+		sum1 = int1 + int2
+		sum2 = int1 + int3
+		sum3 = int2 + int3
+		if(sum1 == int3 || sum2 == int2 || sum3 == int1)
+			true
+		else
+			false
+		end
+	end
 
 	# TODO - write pig_latinify
 
