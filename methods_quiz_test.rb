@@ -50,4 +50,12 @@ class MethodsQuizTest < MiniTest::Test
 		assert_equal false, @m.two_as_one?(5,5,23)
 		assert_equal true, @m.two_as_one?(0,0,0)
 	end
+
+	def test_pig_latinify
+		assert_equal "wiftsay", @m.pig_latinify('swift')
+		assert_equal "empiricalway", @m.pig_latinify('empirical')
+		assert_equal "ythonpay", @m.pig_latinify('PytHoN')
+		assert_equal "avajay", @m.pig_latinify('Java  ')
+		assert_equal "sh*t", @m.pig_latinify('shit')
+		assert_equal "d*mn", @m.pig_latinify(' DaMN   ')
 end
