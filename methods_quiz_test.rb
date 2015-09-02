@@ -18,4 +18,9 @@ class MethodsQuizTest < MiniTest::Test
 		assert_equal false, @m.has_teen?([1,12,20])
 	end
 
+	def test_not_string
+		assert_equal "not feasible", @m.not_string("feasible")
+		assert_equal "not a trap, Admiral", @m.not_string("not a trap, Admiral")
+	end
+
 end
