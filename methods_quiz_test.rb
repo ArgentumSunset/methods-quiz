@@ -24,4 +24,14 @@ class MethodsQuizTest < MiniTest::Test
 		assert_equal "not a trap, Admiral", @m.not_string("not a trap, Admiral")
 	end
 
+	def test_icy_hot
+		assert_equal true, @m.icy_hot?(-53,105)
+		assert_equal true, @m.icy_hot?(105,-53)
+		assert_equal false, @m.icy_hot?(-53,-12)
+		assert_equal false, @m.icy_hot?(105,119)
+		assert_equal false, @m.icy_hot?(105,52)
+		assert_equal false, @m.icy_hot?(-53,52)
+		assert_equal false, @m.icy_hot?(18,52)
+	end
+
 end
